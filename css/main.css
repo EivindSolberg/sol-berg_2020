@@ -212,8 +212,8 @@ clip-path: ellipse(46% 47% at 50% 50%);
 
 
 .project>img {
-    width: 380px;
-    height: 180px;
+width:90%;
+    max-width:500px;
 }
 .project p {
     max-width: 300px;
