@@ -1,14 +1,17 @@
- .container {
+ .container_til_hode {
             display: relative;
-            width: auto;
-        }
+
+            min-height: 400px;
+            min-width: 100%;
+  }
 
 
         .hode {
             position: absolute;
-            top: 50%;
+            top: 300px;
             left: 50%;
-            transform: translate(-50%, -50%);
+            transform: translate(-40%, -50%);
+     
 
         }
 
@@ -27,20 +30,20 @@
         }
 
         .neck {
-            background: #D54300;
+            background: var(--primary);
             position: relative;
             top: 0;
             transform: translate(0px, -15px);
             z-index: 3;
             clip-path: url(path.svg#c1);
-
         }
 
 
 
-        /* Polygon fra original side testes for å se om den fungerer på mobil */
+        /* Polygon fra original side testes for å se om den fungerer på mobil 
+        https://bennettfeely.com/clippy/ */
 
-        #portrett {
+        .portrett {
             position: relative;
             top: 0;
             height: 400px;
