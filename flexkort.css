@@ -1,0 +1,227 @@
+ 
+/*Sentrer alle kortene og legger til litt luft på hver rad av kort*/
+.sentrert{
+    margin: 1em auto 0 auto;
+    max-width:90%;
+    color: #404040;
+    font-family:'Lato', Arial, sans-serif;
+    line-height: 1.5;
+    display: flex;
+}
+
+.presentasjon{
+    width:70%;
+    margin:0 auto;
+    text-align:center;
+    padding:25px;
+}
+    
+    /*Gjør kortene om til flex slik at siste kort blir nøyaktig midtstil */
+.allekortene{
+    display:flex;
+    justify-content: space-between;
+    flex-wrap:wrap;  
+    margin: 4em auto;
+    max-width: 1040px; 
+}
+    /*Her er mobile først så vi starter med ett dobbelt sett med kort*/
+.kort {
+
+    flex: 0 1 calc(100% - 1em);
+    background-color: white;
+    z-index: 0;
+    position: relative; 
+    border-radius: 4px;
+    margin: .5em .5em 1em 0.5em;
+    border-radius: 4px;
+
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.2),0 1px 5px 0 rgba(0,0,0,.12);
+    
+    -webkit-transition: all 250ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    transition:         all 250ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+    
+.kort:hover{
+   /*  animerer bevegelsen på kortene opp */
+    transform: translate(0,-.8em);}
+    
+.menybilde > img {
+    position:relative;
+    z-index:-1;
+    display:block;
+    height:auto; 
+    width:100%;
+    border-radius: 4px 4px 0px 0px;
+}
+
+    
+/*Navnebruken er noe utradisjonell slik at det ikke kommer i konflikt med andre elementer på nettsiden*/
+.hikon {
+    height: 20%;
+    padding: 2em;
+ 
+/*Plasserer ikonet midt i mor/far -elementet*/    
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+    -webkit-filter: drop-shadow(0px 0px 10px rgba(0,0,0,0.4));
+    filter: drop-shadow(0px 0px 10px  rgba(0,0,0,0.4));
+    -webkit-transition: all 250ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    transition:         all 250ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    
+
+}
+    
+.hikon:hover {
+    transform: translate(-50%, -70%);
+    -webkit-filter: drop-shadow(0px 0px 10px rgba(0,0,0,0.8));
+    filter: drop-shadow(0px 0px 10px  rgba(0,0,0,0.8));
+}
+
+    
+.overskrift{
+    margin: auto;
+
+    padding: 0.1em;
+    width:95%;
+    z-index: 1;
+    height: 1.5em;
+    font-size: 16px;
+    text-align: center;
+     
+    color:white;
+    background-color: rgb(255, 111, 111);
+    border-radius: 4px;
+    
+    -webkit-transition: all 250ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    transition:         all 250ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+    
+.overskrift:hover{
+    transform: translate(0,-.2em);
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.2),0 1px 5px 0 rgba(0,0,0,.12);
+}
+    
+
+   
+.ptekst{
+    font-size: 12px;
+    text-align: center;
+    padding: 1em 1em 2em 1em;
+    background-color: white;    
+}
+
+.kort:last-child{
+    margin:0 auto;
+    margin: 1em auto 1em auto;
+}
+    
+  
+.kort a {
+    color: black;
+    text-decoration: none;
+    margin-bottom: -.5em;    
+}
+ 
+    
+ 
+        /* 2 + 2 + 2 + 2 +1  -  størrelse nummer 2 */
+@media all and (min-width:644px) and (max-width:800px){
+    
+    .kort{
+        flex: 0 1 calc(50% - 1em);
+        margin-top:2em;}
+    
+    .overskrift{font-size: 16px;}    
+    .ptekst{ font-size: 12px;}
+    .sentrert{margin: 4em auto 0 auto;}
+    .kort:last-child{margin-top:2em;}
+}
+    
+    /*  3 + 3 + 2  -  størrelse nummer 3 
+@media screen and (min-width:686px) and (max-width:1000px){
+    .kort{
+        flex: 0 1 calc(33% - 1em);
+        margin-top:2em;}
+        
+    .overskrift{font-size: 16px;}    
+    .ptekst{font-size: 12px;}
+    .sentrert{margin: 4em auto 0 auto;}
+
+ 
+  .kort:nth-child(7) {
+        margin-left:5.5em;
+        margin-right:.5em;
+        margin-left:10.5%;
+    }
+   
+    .kort:last-child{
+        margin-top:2em;
+        margin-right:10.5%;
+    }
+}*/
+    
+    /*  4 + 4   -  kort størrelse nummer 4*/
+@media all and (min-width:801px){
+.kort{  flex: 0 1 calc(25% - 1em);
+        margin-top:1em;
+    }        
+.kort:last-child{margin:1em auto;}
+.overskrift{font-size: 18px;}    
+.ptekst{font-size: 14px;}
+.sentrert{margin: -3em auto 0 auto;}
+    .ikon{    width: 300%;}
+    .youtube{
+  margin:200px 0 0 100px;
+}
+}
+
+
+
+.ikon {
+
+    height: 150px;
+
+}
+
+   
+
+     /*  5 + 3 kort  - størrelse nummer 5
+@media all and (min-width:1350px){
+
+     .kort:nth-child(6) {
+        margin-left:10.5%;
+         margin-right:.5em;
+    }
+    
+   .kort:nth-child(8) {
+        margin-left:.5em;
+        margin-right:.5em;
+    }
+    
+    .kort:last-child{
+        left:0em;
+        margin-right:10.5%;
+        }
+         
+
+.sentrert{margin: 4em auto 0 auto;}
+.allekortene{max-width: 1600px; }
+    
+.kort{  flex: 0 1 calc(20% - 1em);
+        margin-top:1em;
+ }
+    
+.overskrift{font-size: 21px;}    
+.ptekst{font-size: 14px;}
+    
+}
+.presentasjon{
+    width:70%;
+    margin:0 auto;
+    text-align:center;
+    padding:25px;
+}
+
