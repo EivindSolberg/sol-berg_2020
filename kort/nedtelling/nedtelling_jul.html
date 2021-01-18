@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Nedtelling til Julaften da Jesus ble født!</title>
+                <link rel="stylesheet" type="text/css" href="nedtelling.css">
+    </head>
+    <body>
+        <div class="senterboks">
+            <div class="header">
+                <h2>Nedtelling til Julaften!</h2>
+                
+                <div class="my-countdown"></div>
+            </div>
+        </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="jquery.plugin.js"></script>
+        <script src="jquery.countdown.js"></script>
+        <script>
+            $(document).ready(function(){
+             
+                 $(".my-countdown").countdown({
+                     until:$.countdown.UTCDate(+1,2018,11,24,0,0,0 ), format: "d,h,m,s"
+                 });
+                
+            });
+           
+        
+        </script>
+        
+        
+    </body>
+</html>

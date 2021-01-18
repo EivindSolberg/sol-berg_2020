@@ -1,0 +1,110 @@
+
+/* Styler hele dokumentet med fontvalg og bakgrunnsfarge */ 
+body{
+    background-color: #ccc;
+    font-family:arial, sans-serif;
+    font-size: 18px;
+    color:#404040;
+    line-height:1.5;
+}
+
+
+/*Sentrer hele siden*/
+.sentrert{
+    margin:0 auto;
+}
+
+/*Width 100% gjør at bilde strekker seg like bred som boksen den ligger i */
+img{
+    display: block;
+    border:0;
+    width:100%;
+    height: auto;
+    border-radius:25px 25px 0px 0px;
+}
+
+
+/* Tar bort hvite områder ved bildet i kortet*/
+figure{
+    margin:0;
+}
+
+
+/*gir bakgrunnsfarge til kortet*/
+.kort{
+    background-color: #fff;
+    margin-bottom: 40px;
+    border-radius:25px;
+}
+
+
+/*Tar bort den stygge blåfargen og linja under lenkene*/
+.kort a{
+    color:black;
+    text-decoration: none;
+}
+
+
+/*Lager skygge på kortet*/
+.kort:hover{
+    box-shadow:0px 0px 45px 0px rgba(0,0,0, 0.5);
+}
+
+
+/*Lager luft rundt innholdet*/
+.innhold{
+    padding:30px;
+
+}
+
+
+/*------!!! Her starter siden med å style innholdet ulikt ved forskjellige skjermstørrelser !!!!!! ---------*/
+
+/*Denne @media sier: "Når skjermen oppnår 720px i bredden så gjelder reglen om at innholdet ikke skal vokse mer enn 1300px  "*/
+@media screen and (min-width:720px){
+    .sentrert{
+        max-width: 1300px;
+    }
+}
+
+/*@media sier at ved 600px så skal kortene være 50% i bredden*/
+@media screen and (min-width:600px){
+    
+    .stokk{
+        display:flex;
+        justify-content: space-between;
+        flex-wrap:wrap;
+    }
+    
+    .kort{
+        flex: 0 1 calc(50% - 12px);
+    }
+}
+
+/*@media sier at ved 800px så skal kortene være 33% i bredden*/
+@media screen and (min-width:800px){
+    
+    .stokk{
+        display:flex;
+        justify-content: space-between;
+        flex-wrap:wrap;
+    }
+    
+    .kort{
+        flex: 0 1 calc(33% - 12px);
+    }
+}
+
+/*@media sier at ved 1000px så skal kortene være 25% i bredden*/
+@media screen and (min-width:1000px){
+    
+    .stokk{
+        display:flex;
+        justify-content: space-between;
+        flex-wrap:wrap;
+    }
+    
+    .kort{
+        flex: 0 1 calc(25% - 12px);
+    }
+}

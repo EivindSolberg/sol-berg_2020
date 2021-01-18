@@ -1,0 +1,168 @@
+.centered{
+    margin:0 auto;
+    padding: 0 1em;
+}
+
+body, 
+button, 
+textarea {
+    color: #404040;
+    font-family:Arial, sans-serif;
+    font-size: 18px;
+    line-height: 1.5;
+    background-color: #ccc;
+
+}
+
+
+.nav-mixed {
+    display:flex;
+    background: hsl(0, 0%, 15%);
+    flex-wrap: wrap;
+    color: white;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    /* illustrere med farge hvor denne strekker seg 
+    background-color: lightblue; */
+}
+
+.menu ul {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+	background: hsl(0, 0%, 15%);
+     /* illustrere med farge hvor denne strekker seg 
+    background-color: lightgreen;*/
+}
+
+.menu li a {
+	display: block;
+	text-decoration: none;
+	color: white;
+	padding: .6em 1em;
+    
+}
+
+.menu li a:hover {
+	background: hsl(0, 0%, 25%);
+}
+
+
+.single-nav li {
+        flex: 1 0 auto;
+        text-align: center;
+    }
+    
+
+.social-menu ul {
+    display:flex;
+    flex-wrap:wrap;
+    justify-content: flex-end;
+}
+
+
+/* Ikoner er vanskelig for en skjermleser og beskrive derfor hjelper vi til med å skrive hva som er bak ikonene fra Font-awesome med denne */
+.screen-reader-text {
+	clip: rect(1px, 1px, 1px, 1px);
+	position: absolute !important;
+	height: 1px;
+	width: 1px;
+	overflow: hidden;
+}
+
+
+/* Setter inn ikoner til menyen */
+.social-menu li a:before {
+    font-family: 'Fontawesome';
+    -webkit-font-smoothing: antialiased;
+    content: '\f08e';
+}
+
+.social-menu li a[href*="twitter.com"]::before { content: '\f099'; }
+.social-menu li a[href*="facebook.com"]::before { content: '\f082'; }
+.social-menu li a[href*="linkedin.com"]::before { content: '\f08c'; }
+.social-menu li a[href*="youtube.com"]::before { content: '\f167'; }
+
+
+
+
+
+/* Meny stilen i desktop versjon, Alt som er over 1000px */
+
+@media screen and (min-width: 1000px) {
+ 
+    .single-nav ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+}
+    
+
+
+/*Her kommer koden til selve hamburgeren 
+
+Gjemmer hamburgeren til siden er over 999px */
+
+@media screen and (min-width:999px) {
+    #burger-check, label{
+        display: none;
+    }
+}
+
+
+
+/* Viser Hamburger når siden er under 999px */
+@media screen and (max-width:999px) {
+    label{
+        font-size: 300%;
+        cursor: pointer;
+        padding-left: 20px;
+        width: 100%;
+        /* illustrere med farge hvor denne strekker seg 
+        background-color: lightcoral; */
+    }
+    
+    
+    label:hover{
+        background-color:hsl(0, 0%, 25%);
+
+    }
+
+    .burger-check{
+        display: none;
+    }
+    
+    .navigation{
+        overflow: hidden;
+        max-height: 0;
+    }
+    
+        /* Når burger knappen er trykket på gi navigation en max-høyde som viser menyelementene  */
+    .burger-check:checked ~ .navigation {
+        max-height: 1230px;
+    }
+    
+    .single-nav li {
+        flex: 1 0 auto;
+        text-align: left;
+    }
+
+}
+
+@media screen and (min-width: 1000px) {
+ 
+    .single-nav ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    
+    .single-nav li {
+        flex: 1 0 auto;
+         text-align: left;
+    }
+    
+}
+
+    

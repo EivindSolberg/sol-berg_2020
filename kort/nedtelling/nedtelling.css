@@ -1,0 +1,92 @@
+body{
+    background-color: darkslateblue;
+    color:white;
+    margin:0;
+    padding:0;
+}
+
+.header{
+    background-color: rgba(0,0,0, 0.5);
+    padding:30px 0px;
+    margin-bottom: 30px;
+}
+
+h2{
+    font-size:150%;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 7px;
+}
+
+.countdown-row{
+    text-align: center;
+    display: flex;
+}
+
+.countdown-section{
+    display:inline-block;
+    width:100%;
+}
+
+.countdown-period{
+    text-align:center;
+    color:tomato;
+    text-transform: uppercase;
+    padding:10px;
+}
+
+.countdown-amount{
+    display: flex;
+    font-size:70px;
+    text-align: center;
+    justify-content: center;
+    }
+
+.senterboks {
+    margin:30px auto;
+    max-width:70%;
+    min-height:640px;
+    font-size:150%;
+    font-family: sans-serif;
+    border: 10px solid rgba(255, 255, 255, 0.2);
+    
+    background: url(jul02.JPG) no-repeat center; 
+    background-size: cover;
+ 
+}
+
+@media screen and (max-width:600px){
+    body{
+        background-color: lightpink;
+    }
+    
+    .countdown-row{
+        display:block;
+    }
+    
+    .countdown-section{
+        margin-top:30px;
+    }
+    
+    h2{
+        font-size:100%;
+    }
+}
+
+/*
+@media screen and (max-width: 600px){
+    body{background-color:lightpink;}
+    
+    .countdown-row{
+    text-align: center;
+    display: block;
+    margin: 40px;
+}
+    .countdown-section{
+        margin-top: 30px;
+    }
+    
+    h2{
+        font-size: 100%;
+    }
+}
