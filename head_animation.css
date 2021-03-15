@@ -18,16 +18,14 @@
 
         .image_head {
             position: absolute;
-            top: -65px;
+            top: -55px;
         }
 
         .head_zindex {
             z-index: 5;
         }
 
-        .head_zindex:hover{
-            transform: scale(1.05);
-        }
+  
 
         .neck {
             background: var(--primary);
